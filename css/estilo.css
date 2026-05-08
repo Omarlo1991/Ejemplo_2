@@ -1,0 +1,261 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4f5e62;
+    font-size: 14px;
+    line-height: 1.6em;
+    background-color: #ffffff;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 30px;
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #6fcf97;
+}
+
+.redes{
+    display: flex;
+    gap: 15px;
+}
+
+.redes img{
+    width: 30px;
+}
+
+
+/* SECCIONES */
+
+.bloque{
+    position: relative;
+
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px;
+
+    overflow: hidden;
+}
+
+
+/* IMAGENES */
+
+.playa{
+    background-image: url("../imagenes/imagenesDeProjectos/imagenesDeLaPlaya1.jpg");
+}
+
+.playa2{
+    background-image: url("../imagenes/imagenesDeProjectos/imagenesDeLaPlaya2.jpg");
+}
+
+.playa3{
+    background-image: url("../imagenes/imagenesDeProjectos/imagenesDeLaPlaya3.jpg");
+}
+
+
+/* POSICIONES */
+
+.izquierda{
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding-left: 10px;
+    padding-top: 40px;
+}
+
+.derecha{
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    padding-right: 10px;
+    padding-top: 40px;
+}
+.centro{
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* CONTENIDO */
+
+.contenido{
+    position: relative;
+    z-index: 2;
+
+    max-width: 410px;
+
+    color: white;
+
+    padding: 40px 35px;
+}
+
+
+/* PRIMERA SECCION */
+
+.hero .contenido{
+    background: none;
+    padding: 0;
+}
+/* oscurecer solo la primera imagen */
+
+.hero::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0,0,0,0.45);
+
+    z-index: 1;
+}
+
+
+/* LADOS OSCUROS RECTOS */
+
+
+.izquierda::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 33%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.60);
+
+    z-index: 1;
+}
+
+.derecha::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 33%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.60);
+
+    z-index: 1;
+}
+
+
+/* AJUSTE TEXTO */
+
+
+.izquierda .contenido{
+    margin-left: 15px;
+}
+
+.derecha .contenido{
+    margin-right: 15px;
+}
+
+
+/* TEXTOS */
+
+.contenido h1{
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.contenido h2{
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contenido p{
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+    .bloque{
+        padding: 40px;
+    }
+
+    .contenido{
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    .contenido h1{
+        font-size: 45px;
+    }
+
+    .contenido h2{
+        font-size: 38px;
+    }
+
+    .contenido p{
+        font-size: 18px;
+    }
+
+    .menu{
+        gap: 15px;
+    }
+
+    .izquierda::before,
+    .derecha::before{
+        width: 100%;
+    }
+}
