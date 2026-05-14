@@ -1,3 +1,4 @@
+
 /* Reset básico */
 * {
     margin: 0;
@@ -37,18 +38,15 @@ body {
 .menu{
     display: flex;
     gap: 30px;
-
     list-style: none;
 }
 
 .menu a{
     color: white;
     text-decoration: none;
-
     font-weight: bold;
     font-size: 14px;
-
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .menu a:hover{
@@ -69,7 +67,6 @@ body {
 
 .bloque{
     position: relative;
-
     height: 100vh;
 
     background-size: cover;
@@ -80,7 +77,6 @@ body {
     align-items: center;
 
     padding: 80px;
-
     overflow: hidden;
 }
 
@@ -105,7 +101,6 @@ body {
 .izquierda{
     justify-content: flex-start;
     align-items: flex-start;
-
     padding-left: 10px;
     padding-top: 40px;
 }
@@ -113,10 +108,10 @@ body {
 .derecha{
     justify-content: flex-end;
     align-items: flex-start;
-
     padding-right: 10px;
     padding-top: 40px;
 }
+
 .centro{
     justify-content: center;
     text-align: center;
@@ -128,11 +123,8 @@ body {
 .contenido{
     position: relative;
     z-index: 2;
-
     max-width: 410px;
-
     color: white;
-
     padding: 40px 35px;
 }
 
@@ -143,34 +135,26 @@ body {
     background: none;
     padding: 0;
 }
-/* oscurecer solo la primera imagen */
 
 .hero::before{
     content: "";
-
     position: absolute;
     inset: 0;
-
     background-color: rgba(0,0,0,0.45);
-
     z-index: 1;
 }
 
 
-/* LADOS OSCUROS RECTOS */
-
+/* LADOS OSCUROS */
 
 .izquierda::before{
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
 
     width: 33%;
     height: 100%;
-
     background-color: rgba(0,0,0,0.60);
 
     z-index: 1;
@@ -178,15 +162,12 @@ body {
 
 .derecha::before{
     content: "";
-
     position: absolute;
-
     top: 0;
     right: 0;
 
     width: 33%;
     height: 100%;
-
     background-color: rgba(0,0,0,0.60);
 
     z-index: 1;
@@ -194,7 +175,6 @@ body {
 
 
 /* AJUSTE TEXTO */
-
 
 .izquierda .contenido{
     margin-left: 15px;
@@ -222,6 +202,29 @@ body {
 .contenido p{
     font-size: 18px;
     line-height: 1.7;
+}
+
+
+/* CUARTA SECCION (ARREGLADA) */
+
+.info.fondo-verde .contenido{
+    color: black;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.info.fondo-verde ul{
+    list-style-position: inside;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.info.fondo-verde li{
+    margin-bottom: 10px;
 }
 
 
