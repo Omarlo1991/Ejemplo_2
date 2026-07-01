@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos | Manos Verdes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
@@ -13,14 +16,46 @@
 
     <header>
     
-    <nav>
-            <p>Manos verdes ONG</p>
-        <ul>
-            <li><a href="index.html">Página de Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="programa.html">Programas</a></li>
-            <li><a href="contacto.html">Contactos</a></li>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+        Manos Verdes ONG
+        </a>
+
+        <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+
+        <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="programa.html">Programas</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+
         </ul>
+
+        </div>
+
+    </div>
     </nav>
 </header>
 
@@ -83,30 +118,42 @@
         </section>
 
         <!-- CUARTA SECCION -->
-
+        
         <section class="bloque info fondo-verde centro">
+                
+                <div class="container">
+                    <h2>¿Qué hacemos para conseguirlo?</h2>
 
-            <div class="contenido">
+                <div class="row g-3">
 
-                <h2>¿Qué hacemos para conseguirlo?</h2>
+                    <div class="col-12 col-md-6">
+                        Impulsamos campañas de limpieza en playas y costas para reducir la contaminación por plásticos y residuos sólidos.
+                    </div>
 
-                <ul>
-                    <li>Impulsamos campañas de limpieza en playas y costas para reducir la contaminación por plásticos y residuos sólidos.</li>
+                    <div class="col-12 col-md-6">
+                        Trabajamos junto a comunidades locales y voluntarios para restaurar ecosistemas marinos y proteger la biodiversidad costera.
+                    </div>
 
-                    <li>Trabajamos junto a comunidades locales y voluntarios para restaurar ecosistemas marinos y proteger la biodiversidad costera.</li>
+                    <div class="col-12 col-md-6">
+                        Promovemos el uso responsable de los recursos y la reducción de plásticos de un solo uso en la vida cotidiana.
+                    </div>
 
-                    <li>Promovemos el uso responsable de los recursos y la reducción de plásticos de un solo uso en la vida cotidiana.</li>
+                    <div class="col-12 col-md-6">
+                        Fomentamos la creación y el cuidado de áreas costeras protegidas para conservar especies marinas y sus hábitats naturales.
+                    </div>
 
-                    <li>Fomentamos la creación y el cuidado de áreas costeras protegidas para conservar especies marinas y sus hábitats naturales.</li>
+                    <div class="col-12">
+                        Concientizamos sobre el impacto de la contaminación en los océanos y la importancia de mantener nuestras playas limpias.
+                    </div>
 
-                    <li>Concientizamos sobre el impacto de la contaminación en los océanos y la importancia de mantener nuestras playas limpias.</li>
-                </ul>
+                </div>
 
             </div>
 
         </section>
 
 
+        
         <!-- FORMULARIO -->
 
         <section id="formulario">
@@ -147,16 +194,40 @@
 
                 <br>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" class="btn btn-success">
+                    Enviar
+                </button>
 
             </form>
 
             <br>
 
             <a href="#top">Volver arriba</a>
+        <button id="btn-mas" class="btn btn-success">Ver más</button>
 
+            <p id="texto-extra" style="display:none;">
+                Toda la información enviada a través del formulario es confidencial y será utilizada únicamente para fines de inscripción y contacto dentro de las actividades de la ONG. No compartimos datos personales con terceros y respetamos la privacidad de todos los participantes.
+            </p>
         </section>
+        
+        <section class="cards-flex">
 
+        <div class="card-item">
+            <h3>Campañas</h3>
+            <p>Organizamos limpiezas de playas.</p>
+        </div>
+
+        <div class="card-item">
+            <h3>Voluntariado</h3>
+            <p>Sumate como voluntario activo.</p>
+        </div>
+
+        <div class="card-item">
+            <h3>Educación</h3>
+            <p>Charlas sobre cuidado ambiental.</p>
+        </div>
+
+    </section>
     </main>
 
 
@@ -182,7 +253,8 @@
         <p>&copy; 2026 Manos verdes</p>
 
     </footer>
-
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
