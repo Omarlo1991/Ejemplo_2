@@ -1,19 +1,159 @@
-/* Reset básico */
+/* RESET BÁSICO*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 
+   VARIABLES
+*/
+:root {
+    --color-primario: #2e7d32; 
+    --color-secundario: #333333; 
+    --color-fondo: #f5f5f5;
+    --color-blanco: #ffffff;
+}
 
+/* 
+   ESTRUCTURA GENERAL
+*/
 
+/* Estilos Generales utilizando variables */
+body {
+    font-family: Arial, Helvetica, sans-serif;/* Google Font */
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: var(--color-primario);
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
+.logo-texto {
+    color: var(--color-blanco);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.spacer {
+    height: 80px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--color-blanco);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    color: var(--color-primario);
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 
+   FORMULARIOS
+*/
+form input, form select {
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* 
+   FOOTER
+ */
+footer {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/*LAYOUT PROGRAMA*/
+
+.pagina-programa main{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+   FLEXBOX
+ */
+.cards-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.card-item {
+    flex: 1 1 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* 
+   POSICIONAMIENTO + HERO
+*/
 
 /* SECCIONES */
-
 .bloque{
     position: relative;
     height: 100vh;
@@ -29,9 +169,7 @@
     overflow: hidden;
 }
 
-
 /* IMAGENES */
-
 .playa{
     background-image: url("../imagenes/imagenesDeProjectos/imagenesDeLaPlaya1.jpg");
 }
@@ -44,9 +182,7 @@
     background-image: url("../imagenes/imagenesDeProjectos/imagenesDeLaPlaya3.jpg");
 }
 
-
 /* POSICIONES */
-
 .izquierda{
     justify-content: flex-start;
     align-items: flex-start;
@@ -66,9 +202,7 @@
     text-align: center;
 }
 
-
 /* CONTENIDO */
-
 .contenido{
     position: relative;
     z-index: 2;
@@ -77,9 +211,7 @@
     padding: 40px 35px;
 }
 
-
 /* PRIMERA SECCION */
-
 .hero .contenido{
     background: none;
     padding: 0;
@@ -93,9 +225,7 @@
     z-index: 1;
 }
 
-
 /* LADOS OSCUROS */
-
 .izquierda::before{
     content: "";
     position: absolute;
@@ -122,9 +252,7 @@
     z-index: 1;
 }
 
-
 /* AJUSTE TEXTO */
-
 .izquierda .contenido{
     margin-left: 15px;
 }
@@ -133,9 +261,7 @@
     margin-right: 15px;
 }
 
-
 /* TEXTOS */
-
 .contenido h1{
     font-size: 70px;
     line-height: 1.1;
@@ -153,9 +279,7 @@
     line-height: 1.7;
 }
 
-
-/* CUARTA SECCION (ARREGLADA) */
-
+/* CUARTA SECCION  */
 .info.fondo-verde .contenido{
     color: black;
     text-align: center;
@@ -164,8 +288,6 @@
     flex-direction: column;
     align-items: center;
 }
-
-
 
 .info.fondo-verde ul{
     list-style-position: inside;
@@ -177,9 +299,9 @@
     margin-bottom: 10px;
 }
 
-
-/* RESPONSIVE */
-
+/* 
+   RESPONSIVE
+ */
 @media(max-width: 900px){
 
     .bloque{
@@ -212,149 +334,8 @@
         width: 100%;
     }
 }
-/* Variables en :root para la paleta de colores */
-:root {
-    --color-primario: #2e7d32; /* Verde ecológico */
-    --color-secundario: #333333; /* Gris oscuro */
-    --color-fondo: #f5f5f5;
-    --color-blanco: #ffffff;
-}
 
-/* Estilos Generales utilizando variables */
-body {
-    font-family: Arial, Helvetica, sans-serif;/* Google Font */
-    background-color: var(--color-fondo);
-    color: var(--color-secundario);
-    margin: 0;
-    padding: 0;
-}
+/* 
+   BOOTSTRAP / DARK MODE
+*/
 
-header {
-    background-color: var(--color-primario);
-    padding: 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-
-
-.logo-texto {
-    color: var(--color-blanco);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.spacer {
-    height: 80px; /* Evita que el header tape el contenido principal */
-}
-
-main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--color-blanco);
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-h1, h2 {
-    color: var(--color-primario);
-}
-
-p {
-    line-height: 1.6;
-}
-
-/* Formularios */
-form input, form select {
-    padding: 8px;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 5px;
-}
-
-button {
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #1b5e20;
-}
-
-/* Footer */
-footer {
-    background-color: var(--color-secundario);
-    color: var(--color-blanco);
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-}
-
-
-.pagina-programa main{
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.cards-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-.card-item {
-    flex: 1 1 250px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-/*modo oscuro*/
-body.oscuro {
-    background-color: #1a1a1a;
-    color: #f5f5f5;
-}
-
-body.oscuro .contenido {
-    color: white;
-}
-
-body.oscuro .card-item {
-    background-color: #333;
-    color: white;
-}
