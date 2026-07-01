@@ -14,52 +14,10 @@ body {
 }
 
 
-/* NAVBAR */
 
-.navbar{
-    background-color: black;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    padding: 10px 30px;
 
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-.logo img{
-    width: 80px;
-}
-
-.menu{
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-.menu a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.menu a:hover{
-    color: #6fcf97;
-}
-
-.redes{
-    display: flex;
-    gap: 15px;
-}
-
-.redes img{
-    width: 30px;
-}
 
 
 /* SECCIONES */
@@ -216,6 +174,7 @@ body {
 }
 
 
+
 .info.fondo-verde ul{
     list-style-position: inside;
     padding: 0;
@@ -271,7 +230,7 @@ body {
 
 /* Estilos Generales utilizando variables */
 body {
-    font-family: 'Roboto', sans-serif; /* Google Font */
+    font-family: Arial, Helvetica, sans-serif;/* Google Font */
     background-color: var(--color-fondo);
     color: var(--color-secundario);
     margin: 0;
@@ -280,7 +239,7 @@ body {
 
 header {
     background-color: var(--color-primario);
-    padding: 15px 0;
+    padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -374,4 +333,11 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
+}
+
+
+.pagina-programa main{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
